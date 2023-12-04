@@ -1,5 +1,15 @@
 # bis620.2022
 
+This package is to launch a clinical trial inquiry dashboard. The primary function of this package is `shiny_app()`, designed to launch a R Shiny app without any parameters, featuring various functionalities (as outlined below) and utilizes data sourced from ClinicalTrials.gov.
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/Elnnnnn/bis620.2022/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/R-CMD-check.yml)
+<!-- badges: end -->
+
+<!-- badges: start -->
+[![Test-coverage](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml)
+<!-- badges: end -->
+
+[Test coverage webpage](https://app.codecov.io/gh/Elnnnnn/bis620.2022/tree/main/R)
 
 ## Author
 -[Zhongyu Cai](https://github.com/ZoeyCai2001)  
@@ -19,7 +29,7 @@ devtools::install_github("Elnnnnn/bis620.2022")
 
 ## Introduction
 
-The primary function of this package is `shiny_app()`, designed to launch an R Shiny app with default parameters. The Shiny webpage serves as a clinical trial inquiry dashboard, featuring various functionalities (as outlined below) and utilizes data sourced from ClinicalTrials.gov.
+
 
 To initiate the Shiny app, simply execute the following command:
 
@@ -77,12 +87,4 @@ In this function, a new column link is created by concatenating the URL with the
 
 
 
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/Elnnnnn/bis620.2022/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/R-CMD-check.yml)
-<!-- badges: end -->
 
-<!-- badges: start -->
-[![Test-coverage](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml)
-<!-- badges: end -->
-
-[Test coverage webpage](https://app.codecov.io/gh/Elnnnnn/bis620.2022/tree/main/R)
