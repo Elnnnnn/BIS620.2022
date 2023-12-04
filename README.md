@@ -2,8 +2,10 @@
 
 
 ## Author
--[Zhongyu Cai](https://github.com/ZoeyCai2001)
--[Bowen Zhao](https://github.com/bowenwen)
+-[Zhongyu Cai](https://github.com/ZoeyCai2001)  
+
+-[Bowen Zhao](https://github.com/bowenwen)  
+
 -[Xinyu Zhang](https://github.com/Elnnnnn)
 
 ## Installation
