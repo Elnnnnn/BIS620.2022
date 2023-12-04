@@ -29,11 +29,9 @@
 #' @importFrom utils head
 #' @importFrom dplyr collect select mutate filter
 #' @importFrom ggplot2 ggplot geom_line xlab ylab theme_bw
-shiny_app <- function(){
+shiny_app <- function() {
   data("studies")
-  #source("R/ct-util_mid.R")
-  #require(shiny)
-  max_num_studies = 1000
+  max_num_studies <- 1000
 
   # Define UI for application that draws a histogram
   shinyApp(
