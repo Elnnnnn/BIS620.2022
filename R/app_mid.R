@@ -74,11 +74,11 @@ shiny_app <- function() {
             type = "tabs",
             tabPanel("Phase", plotOutput("phase_plot")),
             tabPanel("Concurrent", plotOutput("concurrent_plot")),
-            tabPanel("Conditions",plotOutput("conditions_plot")),
-            tabPanel("Word Cloud",plotOutput("wordcloud_plot")),
-            tabPanel("World Map",plotOutput("country_plot")),
+            tabPanel("Conditions", plotOutput("conditions_plot")),
+            tabPanel("Word Cloud", plotOutput("wordcloud_plot")),
+            tabPanel("World Map", plotOutput("country_plot")),
             tabPanel("American Map",plotOutput("states_us_plot")),
-            tabPanel("Top 10 Investigated Diseases",plotOutput("mesh_pie_chart"))
+            tabPanel("Top 10 Investigated Diseases", plotOutput("mesh_pie_chart"))
           ),
           DT::dataTableOutput("trial_table")
         )
@@ -140,13 +140,13 @@ shiny_app <- function() {
           theme_bw()
       })
 
-      output$conditions_plot = renderPlot({
+      output$conditions_plot <- renderPlot({
         get_studies() |>
           plot_conditions_histogram()
       })
 
-      output$trial_table =  DT::renderDataTable({
-        df = get_studies() |>
+      output$trial_table <-  DT::renderDataTable({
+        df <- get_studies() |>
           table_with_link()
         DT::datatable(df[drop = FALSE], escape = FALSE)
       })
@@ -166,28 +166,27 @@ shiny_app <- function() {
 
       output$wordcloud_plot <- renderPlot({
         v <- terms()
-        wordcloud(names(v), v, scale=c(4,0.5),
-                  min.freq = input$freq, max.words=input$max,
-                  colors=brewer.pal(8, "Dark2"))
+        wordcloud(names(v), v, scale = c(4, 0.5),
+                  min.freq = input$freq, max.words = input$max,
+                  colors = brewer.pal(8, "Dark2"))
       })
 
-      output$country_plot <-renderPlot({
+      output$country_plot <- renderPlot({
         get_studies() |>
           plot_countries()
       })
 
-      output$states_us_plot <-renderPlot({
+      output$states_us_plot <- renderPlot({
         get_studies() |>
           plot_states_us()
       })
 
-      output$mesh_pie_chart <-renderPlot({
+      output$mesh_pie_chart <- renderPlot({
         get_studies() |>
           pie_chart_mesh()
       })
     }
   )
 }
-#shinyApp(ui = ui, server = server)
-#shiny_app()
+
 
