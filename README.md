@@ -27,7 +27,7 @@ To install the development version of bis620.2022, you can use the following com
 devtools::install_github("Elnnnnn/bis620.2022")
 ```
 
-## Introduction
+## Example
 
 
 
@@ -53,7 +53,7 @@ library(ctrialsgov)
 # ONLY RUN THIS ONCE!
 #  ctgov_get_latest_snapshot()
 ```
-
+## Features
 
 **Feature 1: “Data Range Selection**
 
