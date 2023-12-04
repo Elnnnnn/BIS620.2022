@@ -19,4 +19,5 @@ jobs:
 
     - name: Run R CMD check
       run: |
-        rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error", check_dir = "check")
+         Rscript -e "rcmdcheck::rcmdcheck(args = '--no-manual', error_on = 'error', check_dir = 'check')"
+
