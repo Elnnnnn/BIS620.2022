@@ -19,7 +19,10 @@
 #' @title  Shiny App
 #' @description The function is to run a shiny app for clinical trial inquiry
 #' @export
-#' @importFrom shiny shinyApp fluidPage titlePanel sidebarLayout sidebarPanel textInput selectInput dateRangeInput actionButton sliderInput mainPanel tabPanel tabsetPanel reactive renderPlot h3 hr isolate withProgress setProgress plotOutput
+#' @importFrom shiny shinyApp fluidPage titlePanel sidebarLayout sidebarPanel
+#' textInput selectInput dateRangeInput actionButton sliderInput mainPanel
+#' tabPanel tabsetPanel reactive renderPlot h3 hr isolate withProgress
+#' setProgress plotOutput
 #' @importFrom wordcloud wordcloud
 #' @importFrom DT dataTableOutput renderDataTable datatable
 #' @importFrom utils head
@@ -43,14 +46,14 @@ shiny_app <- function() {
           selectInput("source_class",
                       label = h3("Sponsor Type"),
                       choices = list("All" = "no_filter",
-                                     "Federal" = "FED",
-                                     "Individual" = "INDIV",
-                                     "Industry" = "INDUSTRY",
-                                     "Network" = "NETWORK",
-                                     "NIH" = "NIH",
-                                     "Other" = "OTHER",
-                                     "Other Government" = "OTHER_GOV",
-                                     "Unknow" = "Unknown"
+                        "Federal" = "FED",
+                        "Individual" = "INDIV",
+                        "Industry" = "INDUSTRY",
+                        "Network" = "NETWORK",
+                        "NIH" = "NIH",
+                        "Other" = "OTHER",
+                        "Other Government" = "OTHER_GOV",
+                        "Unknow" = "Unknown"
                       ),
                       selected = 1),
           dateRangeInput("start_date_range", "Start Date Range:",
@@ -77,8 +80,9 @@ shiny_app <- function() {
             tabPanel("Conditions", plotOutput("conditions_plot")),
             tabPanel("Word Cloud", plotOutput("wordcloud_plot")),
             tabPanel("World Map", plotOutput("country_plot")),
-            tabPanel("American Map",plotOutput("states_us_plot")),
-            tabPanel("Top 10 Investigated Diseases", plotOutput("mesh_pie_chart"))
+            tabPanel("American Map", plotOutput("states_us_plot")),
+            tabPanel("Top 10 Investigated Diseases",
+                     plotOutput("mesh_pie_chart"))
           ),
           DT::dataTableOutput("trial_table")
         )
@@ -116,7 +120,8 @@ shiny_app <- function() {
           start_date_c <- as.Date(input$completion_date_range[1])
           end_date_c <- as.Date(input$completion_date_range[2])
           ret <- ret |>
-            filter(completion_date >= start_date_c & completion_date <= end_date_c)
+            filter(completion_date >= start_date_c &
+                     completion_date <= end_date_c)
         }
         ret |>
           head(max_num_studies) |>
@@ -158,7 +163,7 @@ shiny_app <- function() {
         isolate({
           withProgress({
             setProgress(message = "Processing corpus...")
-            getTermMatrix(get_studies())
+            get_term_matrix(get_studies())
           })
         })
       })
@@ -188,5 +193,3 @@ shiny_app <- function() {
     }
   )
 }
-
-
