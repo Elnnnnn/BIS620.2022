@@ -58,3 +58,5 @@ In this function, a new column link is created by concatenating the URL with the
 [![Test-coverage](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
+[Test coverage webpage]{https://app.codecov.io/gh/Elnnnnn/bis620.2022/tree/main/R}
+
