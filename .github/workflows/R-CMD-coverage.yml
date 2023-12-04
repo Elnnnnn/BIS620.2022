@@ -1,0 +1,33 @@
+name: R-CMD-coverage
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-coverage:
+    runs-on: ubuntu-latest
+    container: rocker/r-ver:latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        install.packages(c("remotes", "rcmdcheck"))
+        remotes::install_deps(dependencies = TRUE)
+        install.packages("covr")
+      shell: Rscript {0}
+
+    - name: Test coverage
+      run: |
+        Rscript -e 'covr::codecov()'
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        flags: unittests
+        name: codecov-report
+        fail_ci_if_error: true
+
