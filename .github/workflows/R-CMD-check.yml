@@ -9,7 +9,6 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
-    container: rocker/r-ver:latest
 
     steps:
     - name: Checkout repository
