@@ -5,10 +5,6 @@
 # Find out more about building applications with Shiny here:
 #
 #    http://shiny.rstudio.com/
-#
-
-#library(shiny)
-#library(wordcloud)
 
 # Steps to adding a feature:
 # 1. Specify the feature.
@@ -92,34 +88,34 @@ shiny_app <- function() {
     # Define server logic required to draw a histogram
     server = function(input, output) {
 
-      get_studies = reactive({
+      get_studies <- reactive({
         if (input$brief_title_kw != "") {
-          si = input$brief_title_kw |>
+          si <- input$brief_title_kw |>
             strsplit(",") |>
             unlist() |>
             trimws()
-          ret = query_kwds(studies, si, "brief_title", match_all = TRUE)
+          ret <- query_kwds(studies, si, "brief_title", match_all = TRUE)
         } else {
-          ret = studies
+          ret <- studies
         }
-        if(input$source_class != "no_filter"){
-          ret = ret |>
+        if (input$source_class != "no_filter") {
+          ret <- ret |>
             filter(source_class %in% !!input$source_class)
-        }else{
-          ret = ret
+        }else {
+          ret <- ret
         }
 
         if (!is.null(input$start_date_range)) {
           start_date_s <- as.Date(input$start_date_range[1])
           end_date_s <- as.Date(input$start_date_range[2])
-          ret = ret |>
+          ret <- ret |>
             filter(start_date >= start_date_s & start_date <= end_date_s)
         }
 
         if (!is.null(input$completion_date_range)) {
           start_date_c <- as.Date(input$completion_date_range[1])
           end_date_c <- as.Date(input$completion_date_range[2])
-          ret = ret |>
+          ret <- ret |>
             filter(completion_date >= start_date_c & completion_date <= end_date_c)
         }
         ret |>
@@ -127,16 +123,16 @@ shiny_app <- function() {
           collect()
       })
 
-      output$phase_plot = renderPlot({
+      output$phase_plot <- renderPlot({
         get_studies() |>
           plot_phase_histogram()
       })
 
-      output$concurrent_plot = renderPlot({
-        c = get_studies() |>
+      output$concurrent_plot <- renderPlot({
+        c <- get_studies() |>
           select(start_date, completion_date) |>
           get_concurrent_trials()
-        c$date = as.Date(c$date, format = "%Y-%m-%d")
+        c$date <- as.Date(c$date, format = "%Y-%m-%d")
         c |> ggplot(aes(x = date, y = count)) +
           geom_line() +
           xlab("Date") +
