@@ -10,11 +10,38 @@ output: github_document
 
 ## Installation
 
-You can install the development version of bis620.2022 from [GitHub](https://github.com/) with:
+To install the development version of bis620.2022, you can use the following command in R, assuming you have the `devtools` package installed:
 
-``` r
+```r
 # install.packages("devtools")
 devtools::install_github("Elnnnnn/bis620.2022")
+```
+
+## Introduction
+
+The primary function of this package is `shiny_app()`, designed to launch an R Shiny app with default parameters. The Shiny webpage serves as a clinical trial inquiry dashboard, featuring various functionalities (as outlined below) and utilizes data sourced from ClinicalTrials.gov.
+
+To initiate the Shiny app, simply execute the following command:
+
+```r
+shiny_app()
+```
+
+## Data
+
+The clinical trial inquiry webpage incorporates embedded data within the `shiny_app()` function, eliminating the need for users to install or download the data separately. However, users can also load the data using the command:
+
+```r
+data("studies")
+```
+
+The dataset contains 13 columns and 471252 rows, originating from [National Library of Medicine](https://clinicaltrials.gov/). Additionally, users have the option to download the entire database independently using the following commands:
+
+```r
+# devtools::install_github("presagia-analytics/ctrialsgov")
+library(ctrialsgov) 
+# ONLY RUN THIS ONCE!
+#  ctgov_get_latest_snapshot()
 ```
 
 
@@ -58,5 +85,4 @@ In this function, a new column link is created by concatenating the URL with the
 [![Test-coverage](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
-[Test coverage webpage]{https://app.codecov.io/gh/Elnnnnn/bis620.2022/tree/main/R}
 
