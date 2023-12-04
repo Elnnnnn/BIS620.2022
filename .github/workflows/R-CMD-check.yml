@@ -19,9 +19,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        install.packages('remotes')
-        remotes::install_deps(dependencies = TRUE)
-        remotes::install_cran("rcmdcheck")
+        install.packages('remotes', dependencies = TRUE)
+
 
     - name: Run R CMD check
       run: |
