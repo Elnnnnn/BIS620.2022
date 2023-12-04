@@ -1,0 +1,22 @@
+---
+title: "homework 3"
+format:
+  html:
+    self-contained: true
+---
+
+You may work in the same teams as for the last homework or you may work solo.
+
+This homework will be due at the end of December 4.
+
+1. (1 point) Add your name, yale netid, and github account and team number to [this shared document](https://yale.instructure.com/courses/90962/collaborations/7211). For you team number, pick the smallest natural number that has not already been taken.
+1. (1 points) Get a copy of my [bis620.2023 package on Github](https://github.com/kaneplusplus/bis620.2023) and update the relevant information in the DESCRIPTION. 
+1. (1 point) Add the functions you implemented in your last homework (shiny app) to your package including a function to start the shiny app.
+1. (1 point) Create a repository called bis620.2022 on Github and add your updated package to it. 
+1. (1 point) Add a github action to test the package anytime it is pushed to the repository. 
+1. (1 point) Add a github action to calculate the test coverage (see https://github.com/r-lib/actions and  `usethis::use_github_actions("test-coverage"`)). 
+1. (1 point) Add a github action to lint the package (`usethis::use_github_actions("lint")`).
+1. Add a README.Rmd file with 
+    1. (1 point) A short description of the package and its usage.
+    1. (1 point) A badge indicating if the build was successful.
+    1. (1 point) A link to the coverage page and lint results.

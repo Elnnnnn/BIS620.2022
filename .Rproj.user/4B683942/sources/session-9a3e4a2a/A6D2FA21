@@ -1,0 +1,26 @@
+{
+    "id": "A6D2FA21",
+    "path": "~/Desktop/BIS620.2022/tests/testthat/test-ct-util_mid.R",
+    "project_path": "tests/testthat/test-ct-util_mid.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1701583710884.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "10,14",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1701643605,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1701643605882,
+    "read_only": false,
+    "read_only_alternatives": []
+}

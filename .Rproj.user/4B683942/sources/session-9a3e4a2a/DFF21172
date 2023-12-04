@@ -1,0 +1,26 @@
+{
+    "id": "DFF21172",
+    "path": "~/Desktop/BIS620.2022/R/ct-util_mid.R",
+    "project_path": "R/ct-util_mid.R",
+    "type": "r_source",
+    "hash": "2898372343",
+    "contents": "",
+    "dirty": true,
+    "created": 1701584914660.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "150,38",
+        "scrollLine": "140"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1701660538,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1701663698693,
+    "read_only": false,
+    "read_only_alternatives": []
+}
