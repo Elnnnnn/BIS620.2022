@@ -1,16 +1,3 @@
-# Load required libraries
-library(dplyr)
-library(DT)
-library(ggplot2)
-library(tidyr)
-library(purrr)
-library(tm)
-library(memoise)
-library(rworldmap)
-library(grDevices)
-library(graphics)
-library(utils)
-
 #' My Dataset
 #'
 #' A dataset containing information on clinical trials
@@ -193,7 +180,22 @@ plot_countries = function(x){
     summarise(n = n()) |>
     as.data.frame()
   spdf <- joinCountryData2Map(x, joinCode="NAME", nameJoinColumn="country")
-  mapCountryData(spdf, nameColumnToPlot="n", catMethod="fixedWidth",colourPalette = "white2Black", mapTitle = "Number of Studies Worldwide" )
+
+  max_value <- max(spdf$n, na.rm = TRUE)
+
+  sep_num = min(10, max_value)
+
+  # Create breaks from 10% up to 100% of the maximum value
+  breaks <- seq(max_value/sep_num, max_value, by = max_value/sep_num)
+
+  # Add 0 at the beginning of the breaks and ensure the max value is included
+  breaks <- c(0, breaks)
+
+  # Use these breaks in mapCountryData
+  mapCountryData(spdf, nameColumnToPlot = "n",  catMethod = breaks,
+                 colourPalette = "white2Black", mapTitle = "Number of Studies Worldwide")
+
+#  mapCountryData(spdf, nameColumnToPlot="n", catMethod="fixedWidth",colourPalette = "white2Black", mapTitle = "Number of Studies Worldwide" )
 }
 
 #' @title Table with Links
