@@ -7,8 +7,8 @@
 #    http://shiny.rstudio.com/
 #
 
-library(shiny)
-library(wordcloud)
+#library(shiny)
+#library(wordcloud)
 
 # Steps to adding a feature:
 # 1. Specify the feature.
@@ -195,5 +195,5 @@ shiny_app <- function(){
   )
 }
 #shinyApp(ui = ui, server = server)
-shiny_app()
+#shiny_app()
 
