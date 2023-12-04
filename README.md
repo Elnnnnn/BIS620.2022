@@ -1,12 +1,10 @@
-# bis620.2022mmm
+# bis620.2022
 
 
----
-title: "README"
-author: Zhongyu Cai, Bowen Zhao, Xinyu Zhang
-date: "2023-12-02"
-output: github_document
----
+## Author
+-[Zhongyu Cai](https://github.com/ZoeyCai2001)
+-[Bowen Zhao](https://github.com/bowenwen)
+-[Xinyu Zhang](https://github.com/Elnnnnn)
 
 ## Installation
 
@@ -85,4 +83,4 @@ In this function, a new column link is created by concatenating the URL with the
 [![Test-coverage](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
-
+[Test coverage webpage](https://app.codecov.io/gh/Elnnnnn/bis620.2022/tree/main/R)
