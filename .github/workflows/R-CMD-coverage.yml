@@ -2,9 +2,7 @@ name: R-CMD-coverage
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
 
 jobs:
   test-coverage:
@@ -15,19 +13,19 @@ jobs:
 
     - name: Install dependencies
       run: |
-        install.packages(c("remotes", "rcmdcheck"))
-        remotes::install_deps(dependencies = TRUE)
-        install.packages("covr")
-      shell: Rscript {0}
+        Rscript -e 'install.packages("remotes")'
+        Rscript -e 'remotes::install_deps(dependencies = TRUE)'
+        Rscript -e 'install.packages("covr")'
 
     - name: Test coverage
       run: |
         Rscript -e 'covr::codecov()'
 
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
       with:
+        token: ${{ secrets.CODECOV_TOKEN }}
         flags: unittests
-        name: codecov-report
+        name: codecov-umbrella
         fail_ci_if_error: true
 
