@@ -323,7 +323,7 @@ Therefore, a twelfth-order difference is applied and stored in $ddlx= \nabla_{12
 
 Now we use the preprocessed data to fit models. The sample ACF and PACF of $\nabla_{12}\nabla log(x_t)$ shown in fig.4
 
-```{r, echo=FALSE, fig.height=4, fig.width=8, fig.cap = "sample ACF and PACF of logged Diabetes Mellitus Studies"}
+```{r, echo=FALSE, fig.height=4, fig.width=6.5, fig.cap = "sample ACF and PACF of logged Diabetes Mellitus Studies"}
 # Plot the acf and pacf
 plt = acf2(ddlx,50)
 ```

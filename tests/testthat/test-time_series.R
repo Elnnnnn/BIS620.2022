@@ -50,3 +50,17 @@ test_that("Create Time Series Vector",{
   expect_true(inherits(result, "ts"))
 })
 
+test_that("Time Series Analysis",{
+  matrix_lists <- clean_data_time_series(studies, "country", "United States", "source_class", "UNKNOWN", "INDIV", "OTHER", "start_date", "completion_date", "downcase_mesh_term")
+  clean_data <- matrix_lists[[1]]
+  result <- time_series_analysis(clean_data, "downcase_mesh_term", "diabetes mellitus", "2007-12-31", "2023-12-01", "2030-12-01")
+  ts_data_filtered <- result[[1]]
+  predict <- result[[2]]
+
+  expect_equal(start(ts_data_filtered), c(2013, 1))
+  expect_equal(end(ts_data_filtered), c(2022, 12))
+
+  expect_true(is.list(result))
+  expect_true(length(result) == 2)
+})
+

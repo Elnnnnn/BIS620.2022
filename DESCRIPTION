@@ -28,7 +28,8 @@ Imports:
  reshape2,
  stats,
  lubridate,
- scales
+ scales,
+ astsa
 Suggests: 
     knitr,
     rmarkdown,
