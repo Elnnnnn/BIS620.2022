@@ -10,6 +10,7 @@ plot_countries(x)
 \item{x}{the studies to get the world map for.}
 }
 \description{
-The function is to get the number of studies in different countries
+The function is to get the number of studies in
+different countries
 and visualize in a world map.
 }

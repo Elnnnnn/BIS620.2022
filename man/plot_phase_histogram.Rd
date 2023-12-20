@@ -10,5 +10,6 @@ plot_phase_histogram(x)
 \item{x}{the database table.}
 }
 \description{
-The function is to plot a histogram of phases of selected table with a fixed x-axis.
+The function is to plot a histogram of phases of selected table
+with a fixed x-axis.
 }

@@ -18,5 +18,6 @@ query_kwds(d, kwds, column, ignore_case = TRUE, match_all = FALSE)
 \item{match_all}{whether should match all keywords}
 }
 \description{
-The function is to select cilinical trials that have a keyword in a certain column
+The function is to select cilinical trials that have a keyword
+in a certain column
 }

@@ -10,7 +10,8 @@ table_with_link(x)
 \item{x}{the studies to get the table.}
 }
 \value{
-table containing nct_id(with link),brief title, start date, and completion date.
+table containing nct_id(with link),brief title, start date, and
+completion date.
 }
 \description{
 The function is to get a table of selected studies'

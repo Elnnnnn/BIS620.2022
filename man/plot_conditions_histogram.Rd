@@ -13,6 +13,7 @@ plot_conditions_histogram(x)
 a histogram of conditions of selected studies
 }
 \description{
-The function is to plot a histogram of conditions of selected studies.
-The number of conditions is the smaller one of 50 and number of conditions with percentage>0.0001.
+The function is to plot a histogram of conditions of selected
+studies. The number of conditions is the smaller one of 50 and number of
+conditions with percentage>0.0001.
 }
