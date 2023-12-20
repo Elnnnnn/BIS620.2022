@@ -85,3 +85,4 @@ test_that("line_chart_comparison transforms data correctly", {
   p = line_chart_comparison(normalization_matrix, count_matrix, "INDUSTRY", "sponsor", "percentage")
   expect_true(is.ggplot(p))
 })
+

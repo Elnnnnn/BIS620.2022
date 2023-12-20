@@ -146,7 +146,6 @@ line_chart_comparison <- function(normalization_matrix, count_matrix, column, va
   col_names <- colnames(normalization_matrix)
   for (i in 2:(n - 1)) {
     for (j in (i + 1):n) {
-      if(chitest[i, j] < 0.05) {
         subset_data <- normalization_long[normalization_long[[var_name]] %in% col_names[c(i, j)],]
         p <- ggplot(subset_data, aes_string(x = "disease", y = value_name, group = var_name, color = var_name)) +
           geom_line() +
@@ -154,15 +153,12 @@ line_chart_comparison <- function(normalization_matrix, count_matrix, column, va
           labs(title = paste("Comparison between", col_names[i], "and", col_names[j]),
                x = "Disease", y = "Percentage of Trials") +
           scale_y_continuous(labels = scales::percent)
-
-        # Display the plot
-        print(p)
-        ggsave(paste0("plots/linechart",i,"_",j,".png",sep = ""))
-      }
+        #ggsave(paste0("plots/linechart",i,"_",j,".png",sep = ""))
     }
   }
   return(p)
 }
+
 
 
 

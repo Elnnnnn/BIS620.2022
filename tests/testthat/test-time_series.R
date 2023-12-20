@@ -50,3 +50,4 @@ test_that("Create Time Series Vector",{
   expect_equal(frequency(result), 12)
   expect_true(inherits(result, "ts"))
 })
+
