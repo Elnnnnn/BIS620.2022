@@ -24,7 +24,8 @@ Imports:
  grDevices,
  utils,
  graphics,
- wordcloud
+ wordcloud,
+ reshape2
 Suggests: 
     knitr,
     rmarkdown,
