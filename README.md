@@ -2,14 +2,17 @@
 
 This package is to launch a clinical trial inquiry dashboard. The primary function of this package is `shiny_app()`, designed to launch a R Shiny app without any parameters, featuring various functionalities (as outlined below) and utilizes data sourced from ClinicalTrials.gov.
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/Elnnnnn/bis620.2022/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/R-CMD-check.yml)
+[![R-CMD-check](https://github.com/Elnnnnn/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/R-CMD-check.yml)
 <!-- badges: end -->
 
 <!-- badges: start -->
 [![Test-coverage](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/Elnnnnn/bis620.2022/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
-[Test coverage webpage](https://app.codecov.io/gh/Elnnnnn/bis620.2022/tree/main/R)
+
+<!-- badges: start -->
+[![codecov](https://codecov.io/gh/Elnnnnn/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://app.codecov.io/gh/Elnnnnn/bis620.2022/tree/main/R)
+<!-- badges: end -->
 
 ## Author
 -[Zhongyu Cai](https://github.com/ZoeyCai2001)  
