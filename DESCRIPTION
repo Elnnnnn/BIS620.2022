@@ -27,7 +27,8 @@ Imports:
  wordcloud,
  reshape2,
  stats,
- lubridate
+ lubridate,
+ scales
 Suggests: 
     knitr,
     rmarkdown,

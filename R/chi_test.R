@@ -120,7 +120,7 @@ chi_square_matrix <- function (normalization_matrix) {
 #' @importFrom dplyr arrange slice_head
 #' @importFrom ggplot2 ggplot aes_string geom_line theme element_text labs scale_y_continuous ggsave
 #' @importFrom reshape2 melt
-#' @export
+#' @importFrom scales percent
 line_chart_comparison <- function(normalization_matrix, count_matrix, column, var_name, value_name){
   # Ensure that the column to sort by is present in the matrix
   if(!(column %in% colnames(normalization_matrix))) {
