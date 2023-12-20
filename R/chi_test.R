@@ -153,7 +153,7 @@ line_chart_comparison <- function(normalization_matrix, count_matrix, column, va
           labs(title = paste("Comparison between", col_names[i], "and", col_names[j]),
                x = "Disease", y = "Percentage of Trials") +
           scale_y_continuous(labels = scales::percent)
-        #ggsave(paste0("plots/linechart",i,"_",j,".png",sep = ""))
+         #ggsave(paste0("plots/linechart",i,"_",j,".png",sep = ""))
     }
   }
   return(p)

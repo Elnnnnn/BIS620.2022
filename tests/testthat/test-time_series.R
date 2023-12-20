@@ -3,7 +3,6 @@ library(tidyr)
 library(lubridate)
 library(reshape2)
 library(ggplot2)
-library(astsa)
 
 test_that("Clean data time series",{
   data("studies")
